@@ -41,7 +41,7 @@ $(document).ready(() => {
         let regData = {'name': uname, 'pass': upass};
         $.ajax({
             type: 'POST',
-            url: '/completeprofile',
+            url: '/regiterToDb',
             data: regData,
             success: (data) => {
                 $('#mainDiv').html(data);
