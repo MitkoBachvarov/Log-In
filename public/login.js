@@ -23,6 +23,7 @@ $(document).ready(() => {
     $('#loginForm').click(() => {
         let uname = $('#uname').val();
         let upass = $('#upass').val();
+        // bcrypt and send the already encrypted pass
         let loginData = {'name': uname, 'pass': upass};
         $.ajax({
             type: 'POST',
@@ -38,10 +39,11 @@ $(document).ready(() => {
     $('#regForm').click(() => {
         let uname = $('#uname').val();
         let upass = $('#upass').val();
+        // call bcrypt for upass
         let regData = {'name': uname, 'pass': upass};
         $.ajax({
             type: 'POST',
-            url: '/completeprofile',
+            url: '/regiterToDb',
             data: regData,
             success: (data) => {
                 $('#mainDiv').html(data);

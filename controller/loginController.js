@@ -4,6 +4,8 @@ let MongoClient = require('mongodb').MongoClient;
 let url = 'mongodb://localhost:27017/mydb';
 
 
+
+
 module.exports = (app) => {
     app.get('/', (req,res) =>{
         res.render('home');
@@ -39,7 +41,7 @@ module.exports = (app) => {
     });
 
     // register to DB ===============
-    app.post('.registerToDB', urlencodedParser, (req,res) => {
+    app.post('/regiterToDb', urlencodedParser, (req,res) => {
         let obj = JSON.stringify(req.body);
         let jsonObj = JSON.parse(obj);
 
