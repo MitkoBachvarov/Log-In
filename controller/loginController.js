@@ -4,6 +4,8 @@ let MongoClient = require('mongodb').MongoClient;
 let url = 'mongodb://localhost:27017/mydb';
 
 
+
+
 module.exports = (app) => {
     app.get('/', (req,res) =>{
         res.render('home');
