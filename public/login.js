@@ -53,7 +53,7 @@ $(document).ready(() => {
 
     // ====== \Save profile Data ======
     $('#saveBtn').click(() => {
-        let email = $('#email').val();
+        let email = $("#email").val();
         let phone = $('#phone').val();
         let education = $('#education').val();
         let aoi = $('#aoi').val();
